@@ -4,22 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">   
     <link rel="stylesheet" href="style.css">
-    <title>Todo Project</title>
+    <title>Calculator</title>
 </head>
 <body>
-    <h1>My TODO LIST</h1>
-    <form>
-        <input type="text" class="input-box" placeholder="Add Task">
-        <button type="submi" class="add-button"><i class="fa-solid fa-plus"></i></button>
-    </form>
-    <div class="todo-list-container">
-        <ul class="todolist">
+    <h1>Simple Calculator</h1>
+    <div class="table-container">
+        <table class="tablet" >
+           <tr >
+                <td colspan="3" class="tdclass"><input type="text"  id="calculationInput" class="display" placeholder="Enter Expression" ></td>
+           </tr>
+           <tr >
+               <td>
+                   <div class="button-container">
+                       <button id="ac" class="ac ">AC</button>
+                       <button onclick="deleted()" class="delete">del</button>
+                       <button onclick="adder('%')" class="mod">%</button>
+                       <button onclick="adder('/')" class="div">/</button>
+                   </div> 
+               </td>
+           </tr>
+           <tr >
+            <td>
+                <div class="button-container">
+                    <button onclick="adder('7')" class="btn7 ">7</button>
+                    <button onclick="adder('8')" class="btn8">8</button>
+                    <button onclick="adder('9')"  class="btn9">9</button>
+                    <button onclick="adder('*')"  class="mul">X</button>
+                </div>
+            </td>
+           </tr>
+           <tr>
+            <td>
+                <div class="button-container">
+                    <button onclick="adder('4')" class="btn4">4</button>
+                    <button onclick="adder('5')" class="btn5">5</button>
+                    <button onclick="adder('6')" class="btn6">6</button>
+                    <button onclick="adder('-')" class="sub">-</button>
+                </div>
+            </td>
+        </tr>
+        <tr >
+            <td>
+                <div class="button-container">
+                    <button onclick="adder('1')"  class="btn1">1</button>
+                    <button onclick="adder('2')" class="tbn2">2</button>
+                    <button onclick="adder('3')" class="btn3">3</button>
+                    <button onclick="adder('+')"  class="add">+</button>
+                </div>
+              
+            </td>
+           
+        </tr>
+        <tr >
+            <td>
+                <div class="button-container">
+                    <button onclick="square()">Sq</button>
+                    <button onclick="adder('0')"  class="btn0">0</button>
+                    <button onclick="adder('.')"  class="btndot">.</button>
+                    <button onclick="adder('=')" class="btnans">=</button>
+                </div>
             
-        </ul>
-    </div>
-
-    <script src="script.js"></script>
+            </td>
+           
+        </tr>
+        
+     </table>
+     </div>
+    <script src="\script.js"></script>
 </body>
 </html>
